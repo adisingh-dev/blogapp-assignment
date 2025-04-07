@@ -1,0 +1,42 @@
+.container{
+    border: 1px solid black;
+    width: 30vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+h1{
+    margin: .5rem auto 2rem auto;
+}
+
+.userdetails{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.update{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+p{
+    font-size: 2rem;
+}
+
+.profile-form{
+    margin-left: auto;
+}
+
+#profile{
+    width: 11rem;
+}

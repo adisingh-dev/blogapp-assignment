@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+</head>
+<link rel="stylesheet" href="/css/blogs.css">
+
+<body>
+
+<%- include('./components/navbar.ejs') %>
+<h2>All Blogs</h2>
+<div class="container">
+    <% for(let i = 0; i < response.blogs.length; i++) { %>
+        <div class="tile delete-<%= response.blogs[i].blogid %>">
+            <a href="/api/v1/blog/<%= response.blogs[i].blogid %>" class='content' id='id<%= response.blogs[i].blogid %>' >
+                <img src="<%= response.blogs[i].thumbnail %>" alt="">
+                <p class="title" id="title-<%= response.blogs[i].blogid %>"><%= response.blogs[i].title %></p>
+                <p class="excerpt"><%= response.blogs[i].excerpt %></p>
+            </a>
+
+            <div class="operations">
+                <a href='/api/v1/createblog/<%= response.blogs[i].blogid %>' class="update" id="update-<%= response.blogs[i].blogid %>">Update</a>
+                <div class="delete" id="delete-<%= response.blogs[i].blogid %>">Delete</div>
+            </div>
+
+        </div>
+    <% } %>
+</div>
+    
+</body>
+</html>
+
+
+
+<script>
+    document.querySelector('.container')
+    .addEventListener('click', async function(e) {
+        let id = e.target.id;
+        const removestring = "delete-";
+        id = id.substring(id.indexOf('delete-') + removestring.length);
+        if(
+            e.target.classList.contains('delete') &&
+            confirm(`Are you sure you want to delete the blog "${document.querySelector(`#title-${id}`).textContent}"?`)
+        ) {
+
+            fetch(`/api/v1/blog`, {
+                method: 'delete',
+                body: JSON.stringify({
+                    blogid: id
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => {
+                const elem = document.querySelector(`.delete-${id}`);
+                elem.remove();
+            });
+        }
+    });
+</script>

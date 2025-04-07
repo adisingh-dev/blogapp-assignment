@@ -1,0 +1,69 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    width: 20rem;
+    padding: 1rem;
+}
+
+.title, .body{
+    margin: 1rem 0;
+    text-align: left;
+}
+
+img{
+    width: 20rem;
+    margin: 1rem auto;
+}
+
+.comments{
+    margin: 2rem 0 1rem 1rem;
+}
+
+.comment-input{
+    padding: .5rem;
+    outline: none;
+    width: 20vw;
+}
+
+.submit{
+    margin-top: 3rem;
+}
+
+.submit, .postreply{
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .5rem;
+    width: fit-content;
+    cursor: pointer;
+    font-size: .8rem;
+}
+
+.comment-pic{
+    width: 3rem;
+    margin: 0;
+}
+
+.userinfo{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.postby{
+    color: rgb(88, 88, 88);
+    margin-left: .5rem;
+    font-size: .8rem;
+}
+
+.comment-container{
+    line-height: 2rem;
+    margin: 2rem 0;
+}
+
+.comment{
+    margin: 0;
+}

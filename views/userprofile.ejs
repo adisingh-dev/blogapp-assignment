@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+<link rel="stylesheet" href="/css/userprofile.css">
+<body>
+
+<%- include('./components/navbar.ejs') %>
+<div class="container">
+    <h1>User Profile</h1>
+    <div class="userdetails">
+        <p>Welcome <%= response.userinfo.username %>!</p>
+        <img src="<%= response.userinfo.profile %>" alt="">
+    </div>
+    <form action="/api/v1/profile" method="post" class="profile-form" enctype="multipart/form-data">
+        <input type="file" name="profile" id="profile" required>
+        <button type="submit" class="update">Update</button>
+    </form>
+</div>
+
+</body>
+</html>

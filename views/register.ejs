@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<link rel="stylesheet" href="/css/register.css">
+<body>
+
+<form action="/api/v1/register" method="post" id="register-form">
+    <h2 class="register">Register</h2>
+    <div class="group">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+    </div>
+    <div class="group">
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" required>
+    </div>
+    <div class="group">
+        <label for="confirmpassword">Confirm Password</label>
+        <input type="text" name="confirmpassword" id="confirmpassword" required>
+    </div>
+    <button type="submit" class="submit">Submit</button>
+    <button class="loginroute"><a href="/api/v1/login" class="linktologin">Login</a></button>
+</form>
+    
+</body>
+</html>

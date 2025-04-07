@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/css/navbar.css">
+<div class="navbar">
+    <a href="/api/v1/blogs" class="link">Blogs</a>
+    <a href="/api/v1/createblog" class="link">Create Blog</a>
+    <a href="/api/v1/user/<%= response.userinfo.userid %>" class="link">User Profile</a>
+    <div id='destroy-session' class="link">Logout</div>
+</div>
+
+<script src="/js/navbar.js" type="text/javascript"></script>

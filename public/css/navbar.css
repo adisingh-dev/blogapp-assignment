@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+}
+
+.navbar{
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    padding: 1rem;
+}
+
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+#destroy-session{
+    margin-left: 4rem;
+    cursor: pointer;
+}

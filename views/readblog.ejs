@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Blog</title>
+</head>
+<link rel="stylesheet" href="/css/readblog.css">
+
+<body>
+
+<%- include('./components/navbar.ejs') %>
+<div class="container">
+    <h2 class="title"><%= response.blog.title %></h2>
+    <img src="<%= response.blog.thumbnail %>" alt="">
+    <p class="body"><%= response.blog.body %></p>
+</div>
+<div class="comments">
+    <h3 class="comments">Comments</h3>
+    <%- response.blog.comments %>
+    <form method="post" action="/api/v1/comment" class="comment-form">
+        <input type='text' class='comment-input' name="comment">
+        <input type="hidden" value="master_comment" name="commenttype">
+        <input type="hidden" value="0" name="parentid">
+        <input type="hidden" value="<%= response.blog.id %>" name="blogid">
+        <button type='submit' class="submit">Add Comment</button>
+    </form>
+</div>
+    
+</body>
+</html>

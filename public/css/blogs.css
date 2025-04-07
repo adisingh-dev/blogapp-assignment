@@ -1,0 +1,59 @@
+.container{
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+h2{
+    margin: 2rem 0 1.5rem 1rem;
+}
+
+.tile{
+    border: 1px solid black;
+    cursor: pointer;
+    width: fit-content;
+    padding: 1rem;
+}
+
+.content{
+    
+    text-decoration: none;
+}
+
+.title, .excerpt{
+    color: black;
+    line-height: .5rem;
+}
+
+.operations{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.update, .delete{
+    text-decoration: none;
+    color: black;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: .5rem;
+    width: 30%;
+    cursor: pointer;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.title{
+    font-size: 1.3rem;
+}
+
+.excerpt{
+    color: rgb(109, 109, 109)
+}
