@@ -16,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
+// mount router on /api/v1 route
 app.use('/api/v1', router);
 
 
